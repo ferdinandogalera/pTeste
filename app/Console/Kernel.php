@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        //$schedule->command('inspire')->hourly();
+        $schedule->command('example:cron')->everyTenMinutes(); 
     }
 
     /**
@@ -26,6 +27,12 @@ class Kernel extends ConsoleKernel
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
+        
+        //Commands\Inspire::class,
+          
+        $commands = [
+            Commands\ExampleCron::class,
+        ];
 
         require base_path('routes/console.php');
     }
