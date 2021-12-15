@@ -95,7 +95,7 @@
             $(document).on( "click", "#validar", function(e) {
                 parar = 0; 
                 $("#validar").css("display","none");
-                $("#paravalidar").css("display","");
+                //$("#paravalidar").css("display","");
                 var t = $("#tURL").val();
                 var x = 1;
                 $( ".tvalidar" ).each(function() {
